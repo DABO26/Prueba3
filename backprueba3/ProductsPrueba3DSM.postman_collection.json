@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "0939b957-7267-45cb-a3dc-571f7a909983",
+		"name": "ProductsPrueba3DSM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28283040"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/products/5"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Producto 1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "https://via.placeholder.com/640x480.png/00cc11?text=natus",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Texto de descripccion",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/products"
+			},
+			"response": []
+		}
+	]
+}
