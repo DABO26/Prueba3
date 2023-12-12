@@ -59,10 +59,27 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Product $product)
-    {
-        //
+    public function update(UpdateProductRequest $request, Product $product)
+{
+    try {
+        $fields = $request->validated();
+
+        $product->update([
+            'name' => $fields['name'],
+            'image' => $fields['image'],
+            'description' => $fields['description'],
+            'price' => $fields['price'],
+            'quantity' => $fields['quantity'],
+            'status' => $fields['status']
+        ]);
+
+        return response()->json($product, 200);
+    } catch (\Exception $exception) {
+        return response()->json([
+            'message' => $exception->getMessage()
+        ], 500);
     }
+}
 
     /**
      * Remove the specified resource from storage.
